@@ -4,7 +4,9 @@ mod structs;
 mod traits;
 mod visibility;
 
-use crate::practice::{Describable, Printable, print_description, print_dynamic, print_static, print_all};
+use crate::practice::{
+    Describable, Printable, print_all, print_description, print_dynamic, print_static,
+};
 
 fn main() {
     let mut w = practice::Wallet::new("Daanyaal");
@@ -37,8 +39,8 @@ fn main() {
 
     // Exercise 4 — default vs overridden summarise
     println!("\n=== summarise ===");
-    println!("{}", w.summarise());   // uses default
-    println!("{}", t.summarise());   // uses Transaction's override
+    println!("{}", w.summarise()); // uses default
+    println!("{}", t.summarise()); // uses Transaction's override
 
     // Exercise 5 — visibility module
     println!("\n=== bitcoin module ===");

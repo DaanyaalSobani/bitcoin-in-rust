@@ -65,8 +65,8 @@ fn main() {
     let words = vec!["bitcoin", "satoshi", "nakamoto"];
 
     println!("=== largest ===");
-    println!("{}", largest(&numbers));   // 9
-    println!("{}", largest(&words));     // satoshi (alphabetical)
+    println!("{}", largest(&numbers)); // 9
+    println!("{}", largest(&words)); // satoshi (alphabetical)
 
     println!("\n=== print_largest ===");
     print_largest(&numbers);

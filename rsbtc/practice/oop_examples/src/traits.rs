@@ -18,7 +18,9 @@ pub struct FormalDuck {
 
 impl FormalDuck {
     pub fn new(name: &str) -> Self {
-        Self { name: name.to_string() }
+        Self {
+            name: name.to_string(),
+        }
     }
 }
 

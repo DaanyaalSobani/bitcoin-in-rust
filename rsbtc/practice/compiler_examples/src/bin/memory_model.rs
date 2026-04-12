@@ -18,7 +18,6 @@
 //    //    the returned reference cannot outlive it
 // }
 
-
 // fn main() {
 //     let the_11th_commandment =
 //     String::from("Opps want an initiative - blow up their entire quadrant!");
@@ -31,14 +30,14 @@
 //     // <- the_11th_commandment is destroyed here
 //     }
 
-fn completely_safe_storage(value: String) -> String{
-   // <- value is immediately freed
-   value
+fn completely_safe_storage(value: String) -> String {
+    // <- value is immediately freed
+    value
 }
 fn main() {
     let x = String::from("1337 US Dollars");
     let x = completely_safe_storage(x);
     // ↑ ownership of x was moved to completely_safe_storage()
     println!("{}", x);
-   // ↑ this does not compile, as we no longer have the ownership of x
+    // ↑ this does not compile, as we no longer have the ownership of x
 }

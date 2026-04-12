@@ -27,7 +27,7 @@
 //  completely_safe_storage(x);
 //    // ↑ ownership of x was moved to completely_safe_storage()
 //  println!("{}", x);
-//    // ↑ this does not compile, as we no longer have the ownership 
+//    // ↑ this does not compile, as we no longer have the ownership
 // // of x
 //  }
 // fn takes_reference(my_ref: &String) {
@@ -55,25 +55,25 @@ struct Hello;
 
 trait SayHi {
     fn say_hi(self);
- }
- impl SayHi for Hello {
- fn say_hi(self) {
-    println!("This hi! will cost me my life - I am owned value");
-   }
- }
+}
+impl SayHi for Hello {
+    fn say_hi(self) {
+        println!("This hi! will cost me my life - I am owned value");
+    }
+}
 impl SayHi for &Hello {
     fn say_hi(self) {
         println!("Hi, I am a reference to Hello!");
     }
- }
+}
 impl SayHi for &&Hello {
- fn say_hi(self) {
-    println!("Hi, I am a double reference to Hello!");
- }
- }
- fn main() {
- let hello = Hello;
-   (&hello).say_hi();
-   (&&hello).say_hi();
+    fn say_hi(self) {
+        println!("Hi, I am a double reference to Hello!");
+    }
+}
+fn main() {
+    let hello = Hello;
+    (&hello).say_hi();
+    (&&hello).say_hi();
     hello.say_hi();
- }
+}

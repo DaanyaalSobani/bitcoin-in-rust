@@ -111,7 +111,7 @@ pub fn print_all(items: &[Box<dyn Describable>]) {
 pub mod bitcoin {
     pub struct Block {
         pub height: u64,
-        nonce: u64,     // private — not accessible outside this module
+        nonce: u64, // private — not accessible outside this module
     }
 
     impl Block {

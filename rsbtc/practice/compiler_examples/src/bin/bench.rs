@@ -6,10 +6,7 @@ const RUNS: u32 = 100;
 
 // Iterator chain: filter evens, multiply by 3, sum — single pass, no intermediate Vec
 fn with_iterator(data: &[u64]) -> u64 {
-    data.iter()
-        .filter(|&&x| x % 2 == 0)
-        .map(|&x| x * 3)
-        .sum()
+    data.iter().filter(|&&x| x % 2 == 0).map(|&x| x * 3).sum()
 }
 
 // For loop doing the exact same work
