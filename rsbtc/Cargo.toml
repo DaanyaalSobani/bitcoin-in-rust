@@ -7,5 +7,6 @@ members = [
     "wallet",
     "practice/compiler_examples",
     "practice/hello_world",
+    "practice/immutability",
     "practice/oop_examples",
 ]
