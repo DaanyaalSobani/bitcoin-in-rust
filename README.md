@@ -41,6 +41,20 @@ cd bitcoin-in-rust
 - `rust-analyzer` — language server (autocomplete, type hints, errors)
 - `CodeLLDB` — debugger
 
+## Dev Container (recommended)
+
+If you have [Docker](https://www.docker.com/get-started) and the VSCode [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed, you can skip the manual Rust setup entirely:
+
+1. Clone the repo and open the folder in VS Code
+2. When prompted **"Reopen in Container"**, click it (or run **Dev Containers: Reopen in Container** from the command palette)
+3. VS Code builds the container and installs `rust-analyzer` and `CodeLLDB` automatically
+4. Open a terminal inside VS Code and run your first build:
+```bash
+cd rsbtc && cargo build
+```
+
+The container uses the official Microsoft Rust image so the toolchain version is pinned and consistent across machines.
+
 ## Cargo Cheatsheet
 
 All commands marked with `📁 rsbtc/` must be run from the `rsbtc/` directory.
